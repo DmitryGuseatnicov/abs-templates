@@ -1,0 +1,12 @@
+# Add files here to ignore them from prettier formatting
+
+/dist
+/build
+/coverage
+package-lock.json
+yarn.lock
+/.vscode
+/.github
+/node_modules
+/src/templates
+

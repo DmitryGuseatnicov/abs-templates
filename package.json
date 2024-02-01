@@ -1,0 +1,63 @@
+{
+  "name": "abs-templates",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "gen": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development ts-node src/index.ts",
+    "start:prod": "node ./dist/index.js",
+    "deps": "sh ./deps.sh",
+    "build": "sh ./build.sh",
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
+  },
+  "author": "DmitryGuseatnicov",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DmitryGuseatnicov/abs-templates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DmitryGuseatnicov/abs-templates/issues"
+    },
+  "homepage": "https://github.com/DmitryGuseatnicov/abs-templates#readme",
+  "devDependencies": {
+    "@types/chalk-animation": "^1.6.3",
+    "@types/figlet": "^1.5.8",
+    "@types/gradient-string": "^1.1.5",
+    "@types/inquirer": "^9.0.7",
+    "@types/shelljs": "^0.8.15",
+    "chalk": "^5.3.0",
+    "chalk-animation": "^2.0.3",
+    "cross-env": "^7.0.3",
+    "figlet": "^1.7.0",
+    "gradient-string": "^2.0.2",
+    "inquirer": "^9.2.13",
+    "nanospinner": "^1.1.0",
+    "semantic-release": "^23.0.0",
+    "shelljs": "^0.8.5",
+    "shx": "^0.3.4",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tscpaths": "^0.0.9",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+    }
+}
+}

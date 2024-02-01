@@ -1,0 +1,10 @@
+# ignore package.json is necessary for publishing 
+dist/templates/**/package.json
+
+# local trash
+dist/templates/**/node_modules
+dist/templates/**/.next
+dist/templates/**/build
+dist/templates/**/dist
+dist/templates/**/yarn.lock
+dist/templates/**/package-lock.json

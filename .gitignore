@@ -1,0 +1,6 @@
+templates/**/package-lock.json
+templates/**/yarn.lock
+.DS_Store
+node_modules
+.vscode
+dist
