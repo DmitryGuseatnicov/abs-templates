@@ -15,7 +15,9 @@ import {
     SupportedCommand,
     SUPPORTED_COMMANDS,
 } from './constants';
+
 import { welcome, handleError, askTemplate, askGit } from './utils/cli';
+
 import {
     createProjectFolder,
     createDirectoryContents,
