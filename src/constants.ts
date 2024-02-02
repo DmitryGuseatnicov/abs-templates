@@ -11,6 +11,7 @@ export const CURR_DIR = process.cwd();
 
 export const TEMPLATES_LIST = [
     'vue3-ts-sass',
+    'nuxt3-ts-scss',
 ];
 
 export const DIRECTORY_CONTENT_AVAILABLE_TO_KEEP = [
