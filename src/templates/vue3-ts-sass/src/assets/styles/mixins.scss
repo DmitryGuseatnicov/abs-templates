@@ -1,0 +1,133 @@
+@import './variables.scss';
+
+$screen-mobile-to: 768px;
+$screen-tablet-from: 769px;
+$screen-tablet-to: 1024px;
+$screen-desktop-to: 1280px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$screen-small-max}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$screen-tablet-from}) and (max-width: #{$screen-tablet-to}) {
+    @content;
+  }
+}
+
+@mixin desktop { 
+    @media screen and (max-width: #{$screen-desktop-to}) { 
+        @content; 
+    }
+}
+
+
+@mixin media-to($val) { 
+    @media screen and (max-width: #{$val}) { 
+        @content; 
+    }
+}
+
+@mixin media-from($val) { 
+    @media screen and (min-width: #{$val}) { 
+        @content; 
+    }
+}
+
+@mixin container() {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+////////////////////////////////////////////////////////////////////////
+
+@mixin svg-color($color, $transition-duration: 0ms) { 
+    transition: all $transition-duration; 
+    // fill: $color;
+    path { 
+        transition: all $transition-duration; 
+        // fill: inherit;
+        stroke: $color;
+    }
+} 
+
+@mixin no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin custom-scrollbar() {
+  &::-webkit-scrollbar {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $color-gray-light;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track:disabled {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $color-gray-dark-2;
+    border: 2px solid $track;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $color-gray-dark;
+  }
+}
+
+@mixin cut-for-n-rows($n: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: pre-line;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin reset-button-style {
+  border: none;
+  background: transparent;
+}
+
+@mixin window-popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

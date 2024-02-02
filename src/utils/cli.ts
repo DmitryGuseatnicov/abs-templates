@@ -14,11 +14,11 @@ ${chalk.red(`ERROR!: ${error.message}`)}
 
 export const welcome = async () => {
     const title = chalkAnimation.neon(`
-    🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+    🛞 🏎️ 🛞 🏎️ 🛞 🏎️ 🛞 🏎️ 🛞 🏎️ 🛞 🏎️ 🛞 🏎️ 🛞 🏎️
     
     ABS TEMPLATES
     
-    🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+    🏎️ 🛞 🏎️ 🛞 🏎️ 🛞 🏎️ 🛞 🏎️ 🛞 🏎️ 🛞 🏎️ 🛞 🏎️ 🛞
     `);
 
     await sleep(2000);

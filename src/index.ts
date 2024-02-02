@@ -117,7 +117,7 @@ const main = async () => {
         throw new Error('Installation error');
     }
 
-    figlet('To The Moon', (error, data) =>
+    figlet('Hello ABS unit, Nice to hack', (error, data) =>
         console.log(gradient.cristal.multiline(data)),
     );
 };
